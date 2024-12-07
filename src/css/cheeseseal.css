@@ -1,0 +1,366 @@
+    /* user styles */
+
+    /* styles are what change the color and sizes of stuff on your site. */
+
+    /* these are variables that are being used in the code
+these tended to confuse some people, so I only kept 
+the images as variables */
+
+    :root {
+        --header-image: url("../header.jpg");
+        --body-bg-image: url("../stars2.gif");
+
+        /* colors */
+        --content: #43256E;
+    }
+
+    @keyframes moveIt {
+        from {
+            background-position: top left;
+        }
+
+        to {
+            background-position: bottom right;
+        }
+    }
+
+    body {
+        font-family: "MS UI Gothic", Tahoma;
+        margin: 0;
+        color: #55545c;
+        background-color: #dfe9ff;
+        /* you can delete the line below if you'd prefer to not use an image */
+        background-size: 65px;
+        background-image: var(--body-bg-image);
+        background-repeat: repeat;
+        animation: moveIt 90s linear infinite;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* below this line is CSS for the layout */
+
+    /* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+
+    /* the "container" is what wraps your entire website */
+    /* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
+    #container {
+        max-width: 900px;
+        /* this is the width of your layout! */
+        /* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+        margin: 8px auto;
+        /* this centers the entire page */
+        background-image: url("../dotted.jpg");
+        border: 5px solid #92abd1;
+    }
+
+    /* the area below is for all links on your page
+EXCEPT for the navigation */
+    #container a {
+        color: #2d2d38;
+        font-weight: bold;
+        /* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+    }
+
+    #header {
+        font-family: "MS UI Gothic", Tahoma;
+        width: 100%;
+        background-color: #72baf5;
+        /* header color here! */
+        height: 290px;
+        /* this is only for a background image! */
+        /* if you want to put images IN the header, 
+you can add them directly to the <div id="header"></div> element! */
+        background-image: var(--header-image);
+        background-size: 100%;
+    }
+
+    #flex {
+        display: flex;
+    }
+
+    /* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+    aside {
+        font-family: "MS UI Gothic", Tahoma;
+        background-image: url(dotted.jpg);
+        border-width: 1px;
+        width: 200px;
+        padding: 20px;
+        font-size: smaller;
+        /* this makes the sidebar text slightly smaller */
+    }
+
+
+    /* this is the color of the main content area,
+between the sidebars! */
+    main {
+        font-family: "MS UI Gothic", Tahoma;
+        background-image: url(dotted.jpg);
+        ;
+        flex: 1;
+        padding: 20px;
+        order: 2;
+    }
+
+    /* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+    */ #leftSidebar {
+        order: 1;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    footer {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+        /* this centers the footer text */
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #55545c;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    strong {
+        /* this styles bold text */
+        color: #55545c;
+    }
+
+
+    iframe {
+        overflow-clip-margin: content-box !important;
+        overflow: clip !important;
+        border-width: 2px;
+        border-style: inset;
+        border-color: initial;
+        border-image: initial;
+    }
+
+    .buttons img {
+        width: 90px;
+        height: 42px;
+        transition: transform .2s;
+    }
+
+    /* this is just a cool box, it's the darker colored one */
+    .box {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        padding: 10px;
+    }
+
+    /* CSS for extras */
+
+    #topBar {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        font-size: smaller;
+        background-color: #53535360;
+    }
+
+    /* Start https://www.cursors-4u.com */
+    * {
+        cursor: url(https://cur.cursors-4u.net/anime/ani-9/ani879.ani), url(https://cur.cursors-4u.net/anime/ani-9/ani879.png), auto !important;
+    }
+
+    /* End https://www.cursors-4u.com */
+
+
+    /* BELOW THIS POINT IS MEDIA QUERY */
+
+    /* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+
+    @media only screen and (max-width: 800px) {
+        #flex {
+            flex-wrap: wrap;
+        }
+
+        aside {
+            width: 100%;
+        }
+
+        /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+        main {
+            order: 1;
+        }
+
+        #leftSidebar {
+            order: 2;
+        }
+
+        #rightSidebar {
+            order: 3;
+        }
+
+        #navbar ul {
+            flex-wrap: wrap;
+        }
+    }
+
+
+/* This is the Css for the snowflakes */
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+    100% {
+        top: 100%
+    }
+}
+
+@-webkit-keyframes snowflakes-shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+    100% {
+        top: 100%
+    }
+}
+
+@keyframes snowflakes-shake {
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(80px)
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: -1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+    left: 10%;
+    -webkit-animation-delay: 1s, 1s;
+    animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    -webkit-animation-delay: 6s, .5s;
+    animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    -webkit-animation-delay: 8s, 3s;
+    animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    -webkit-animation-delay: 6s, 2s;
+    animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    -webkit-animation-delay: 2.5s, 1s;
+    animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    -webkit-animation-delay: 3s, 1.5s;
+    animation-delay: 3s, 1.5s
+}
+
+.snowflake:nth-of-type(10) {
+    left: 25%;
+    -webkit-animation-delay: 2s, 0s;
+    animation-delay: 2s, 0s
+}
+
+.snowflake:nth-of-type(11) {
+    left: 65%;
+    -webkit-animation-delay: 4s, 2.5s;
+    animation-delay: 4s, 2.5s
+}

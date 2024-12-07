@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>seal home</title>
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <div id="container">
+        <div id="headerArea">
+            <div id="header"></div>
+            <marquee>
+                <div class="buttons">
+                <img src="src/azarasizensinanime.gif" alt="">
+                <img src="src/vocadb.jpg" alt="">
+                <img src="src/dream-coloured.gif">
+                <img src="src/seallogo.gif" alt="">
+                <img src="src/peko-chan micro bar.gif">
+                <img src="src/kawaiibutton.gif">
+                <img src="src/mikufan.png">
+                <img src="src/button (6).gif">
+                <img src="src/hm (1).gif">
+                </div>
+            </marquee>
+        </div>
+
+        <!-- left sidebar -->
+        <div id="flex">
+            <aside id="leftSidebar">
+                <h2>Navigation</h2>
+                <div class="box">
+                    <ul style="padding-left:10px;">
+                        <li> <a href="seal.html"> Home  </a></li>
+                        <li>Projects <img src="src/icon_haha.gif"> </li>
+                        <li>My Arts <img src="src/icona_happy.gif"></li>
+                        <li>Photography <img src="src/icona_angry.gif"></li>
+                        <li>Intrests <img src="src/icona_no.gif"> </li>
+                    </ul>
+                </div>
+                
+            <h1> 
+                <img src="src/Madoka.gif" alt="">
+                <img src="src/mikustamp.gif">
+                <img src="src/angelstamp.gif">
+                <img src="src/seal.png">
+                <img src="src/snail.png">
+                <img src="src/portal1.png">
+            </h1>
+            </aside>
+
+            <!-- main body -->
+            <main>
+                <div class="box">
+                    <h1>Welcome to Cheesedseal!</h1>
+                    <p><strong>About me</strong></p>
+                    <div class="imageleft">
+                    <img src="src/shirotan.jpg" style="width: 100px; height: 100px; float:left ;"> <p>Hello im Cheese and im a student in Germany studying Computer Science. Currently I am 20 years old. My hobbys are watching
+                         movies/dramas, drawing and photography. I made this website so i can show off all the things i have created ＼(＾▽＾)／ I also really like seals.... </p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- right sidebar -->
+
+            <aside id="rightSidebar">
+                <h2>Updates</h2>
+                <div class="box">
+                    <p> green shirotan </p>
+                    <img src="src/greenshirotan.jpg" style="width: 100px; height: 100px;">
+                </div>
+                <h2> <img src="src/catdancec.gif" alt=""></h2>
+                <h2>calendar</h2>
+                <iframe src="https://calendar.sakura.ne.jp/blog_cal.html" height="200" width="172"
+                    title="Iframe Example"></iframe>
+                <h3> <img src="src/portal2.png" alt=""></h3>
+                <h3>Other Intersting Things</h3>
+                <ul>
+                    <li><a href="" target="_blank">1</a></li>
+                    <li><a href="" target="_blank">2</a></li>
+                    <li><a href="" target="_blank">3</a></li>
+                    <li><a href="" target="_blank">4</a></li>
+                    <li><a href="" target="_blank">5</a></li>
+
+                </ul>
+            </aside>
+        </div>
+
+        <footer id="footer">CC0 Public Domain, 2022</footer>
+
+
+        <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url("src/header.png");
+                --body-bg-image: url("src/stars2.gif");
+
+                /* colors */
+                --content: #43256E;
+            }
+
+            @keyframes moveIt {
+                from {
+                    background-position: top left;
+                }
+
+                to {
+                    background-position: bottom right;
+                }
+            }
+
+            body {
+                font-family: "MS UI Gothic", Tahoma;
+                margin: 0;
+                color: #55545c;
+                background-color: #dfe9ff;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                background-image: var(--body-bg-image);
+                background-repeat: repeat;
+                animation: moveIt 90s linear infinite;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 8px auto;
+                /* this centers the entire page */
+                background-image: url("src/dotted.jpg");
+                border: 5px solid #92abd1;
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #2d2d38;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            #header {
+                font-family: "MS UI Gothic", Tahoma;
+                width: 100%;
+                background-color: #72baf5;
+                /* header color here! */
+                height: 200px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                font-family: "MS UI Gothic", Tahoma;
+                background-image: url(dotted.jpg);
+                border-width: 1px;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                font-family: "MS UI Gothic", Tahoma;
+                background-image: url(dotted.jpg);
+                ;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #55545c;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #55545c;
+            }
+
+            .buttons img {
+                width: 90px;
+                height: 42px;
+                transition: transform .2s;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #ffffff;
+                border: 1px solid #000000;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #53535360;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+
+
+
+</body>
+
+</html>
