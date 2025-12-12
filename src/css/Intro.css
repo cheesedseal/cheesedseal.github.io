@@ -1,0 +1,44 @@
+main {
+    font-family: "MS UI Gothic", Tahoma;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Start https://www.cursors-4u.com */
+* {
+    cursor: url(https://cur.cursors-4u.net/anime/ani-9/ani879.ani), url(https://cur.cursors-4u.net/anime/ani-9/ani879.png), auto !important;
+}
+
+.textbox {
+    display: flex;
+    padding: 0%;
+    flex-direction: column;
+}
+
+.introbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+}
+
+.imagestyle {
+    width: 150px;
+    height: 150px;
+}
+
+ul {
+    list-style-position: inside;
+    margin: 0%;
+}
+
+li{
+    margin: 0%;
+    padding: 5px;
+}
